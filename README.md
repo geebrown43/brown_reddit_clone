@@ -1,5 +1,5 @@
-# REDDIT CLONE
-###npm init
+# REDDIT CLONE #
+###npm init###
 ###knex init
 ###npm install
 ###npm install express --save
