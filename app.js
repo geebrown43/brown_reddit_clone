@@ -18,7 +18,7 @@ app.get('/api/redditusers', (req, res) => {
 })
 app.post('/api/redditusers', (req, res, next) => {
     db.createUser(req.body)
-    .then(user => res.sendStatus(201).json(user))
+    .then(user => res.render('myprofile.hbs'))
 })
 
 app.listen(port, () => {
