@@ -4,3 +4,12 @@ h2 {
     font-family: 'Roboto Mono', monospace;
 }
 
+.top_margin {
+    margin-top: 7%;
+    margin-left: 4%;
+}
+
+.form_margin {
+    margin-top: -24%;
+    margin-left: 4%;
+}

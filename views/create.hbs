@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <title>Reddit Clone | Create Account</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Reddit Clone | Create Account</title>
 </head>
+
 <body>
-    <div class="hero-head">
+
+  <!-- NavBar -->
+  <div class="hero-head">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="index.hbs">
-          <h2>Reddit Clone</h2>
+            <h2>Reddit Clone</h2>
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
@@ -33,6 +38,65 @@
       </div>
     </nav>
   </div>
+
+  <!-- Main Content -->
+
+  <div class="columns">
+    <div class="column is-one-third top_margin">
+      <article class="message is-dark">
+        <div class="message-header">
+          <p>HELLO THERE!!</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+         Welcome to my <strong>Reddit Clone!!</strong> Have you ever wanted to know something but didn't know who to ask ?? Well ask me, your new <strong>Reddit Bot.</strong> But first please create a new account and lets see what we can find!!!
+        </div>
+      </article>
+    </div>
+    <div class="column">
+      <img src="cartoon-robot-free.png" alt="robot">
+    </div>
+  </div>
+
+  <div class="columns form_margin">
+    <div class="column is-one-third">
+      <form action="/api/redditusers" method="post">
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Username" name="username">
+            <span class="icon is-small is-left">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Password</label>
+          <p class="control has-icons-left">
+            <input class="input" type="password" placeholder="Password" name="password">
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </p>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email" name="email">
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    
+  </div>
+
 </body>
 <script src="navbar.js"></script>
+
 </html>
