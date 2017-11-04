@@ -23,6 +23,7 @@ createFormInput = () => {
         input.className = 'input'
         input.type = 'text'
         input.placeholder = 'Name'
+        input.setAttribute('name', 'name')
     control.appendChild(input)
 
     let textlabel = document.createElement('label')
@@ -33,6 +34,7 @@ createFormInput = () => {
     let textinput = document.createElement('textarea')
         textinput.className = 'textarea'
         textinput.placeholder = 'Message Here'
+        textinput.setAttribute('name', 'site')
     textcontrol.appendChild(textinput)
     
 }
