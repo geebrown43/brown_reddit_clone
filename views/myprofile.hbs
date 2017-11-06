@@ -31,6 +31,7 @@
                         <a id="add" class="navbar-item is-active" href="create.hbs">
                             + Add Question
                         </a>
+                        <p class="navbar-item">Logged in as: <b> {{this.username}}</b></p>
 
                     </div>
                 </div>
@@ -42,12 +43,17 @@
 
     <div class="columns">
         <div class="column is-half top_margin">
-            <form id="form">
-                <div id="field" class="field"></div>
+            <form id="form" action="/api/redditusers/link" method="post">
+                <div id="field" class="field question_field"></div>
                 <div id="control" class="control"></div>
 
-                <div id="textfield" class="field"></div>
+                <div id="textfield" class="field question_field"></div>
                 <div id="textcontrol" class="control"></div>
+
+                <div id="votelabel" class="field question_field"></div>
+                <div id="voteinput" class="control"></div>
+
+                <div id="submit_button"></div>
             </form>
 
         </div>

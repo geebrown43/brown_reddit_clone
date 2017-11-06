@@ -13,3 +13,11 @@ h2 {
     margin-top: -26%;
     margin-left: 4%;
 }
+
+#submit_button {
+    margin-top: 10px;
+}
+
+.question_field {
+    margin-top: 10px;
+}

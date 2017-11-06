@@ -13,6 +13,9 @@ createFormInput = () => {
     let control = document.getElementById('control')
     let textfield = document.getElementById('textfield')
     let textcontrol = document.getElementById('textcontrol')
+    let submit_button = document.getElementById('submit_button')
+    let votefield = document.getElementById('votelabel')
+    let votecontrol= document.getElementById('voteinput')
 
     let label = document.createElement('label')
         label.className = 'label'
@@ -28,13 +31,29 @@ createFormInput = () => {
 
     let textlabel = document.createElement('label')
         textlabel.className = 'label'
-        textlabel.textContent = 'Message'
+        textlabel.textContent = 'Favorite Link'
     textfield.appendChild(textlabel)
 
     let textinput = document.createElement('textarea')
         textinput.className = 'textarea'
-        textinput.placeholder = 'Message Here'
-        textinput.setAttribute('name', 'site')
+        textinput.placeholder = 'Links Here'
+        textinput.setAttribute('name', 'link')
     textcontrol.appendChild(textinput)
+
+    let voteLabel = document.createElement('label')
+        voteLabel.className = 'label'
+        voteLabel.textContent = 'Vote'
+    votefield.appendChild(voteLabel)
+
+    let voteInput = document.createElement('input')
+        voteInput.className = 'input'
+        voteInput.placeholder = '0'
+        voteInput.setAttribute('name', 'vote')
+    votecontrol.appendChild(voteInput)
+
+    let button = document.createElement('a')
+        button.className = 'button is-danger is-outlined'
+        button.textContent = 'Submit'
+    submit_button.appendChild(button)
     
 }

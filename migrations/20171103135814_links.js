@@ -4,8 +4,8 @@ exports.up = function(knex, Promise) {
         knex.schema.createTable('links', (table)=>{
           table.increments().primary()
           table.string('name')
-          table.string('site')
-          
+          table.string('link')
+          table.string('votes')
         })
       ])
 };
