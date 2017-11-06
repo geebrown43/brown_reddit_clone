@@ -16,9 +16,23 @@ app.get('/api/redditusers', (req, res) => {
     db.getAllUsers(req.body)
     .then((users) => res.json(users))
 })
+app.get('/api/redditusers/link', (req, res) => {
+    db.getAllLinks(req.body)
+    .then((links) => res.json(links))
+})
 app.post('/api/redditusers', (req, res, next) => {
+    let data = {
+        username: req.body.username,
+        email: req.body.email
+    }
     db.createUser(req.body)
-    .then(user => res.render('myprofile.hbs'))
+    .then(user => res.render('myprofile.hbs', data))
+    console.log(data.username)
+
+})
+app.post('/api/redditusers/link', (req, res) => {
+    db.createLink(req.body)
+    .then(link => res.sendStatus(201).json(link))
 })
 
 app.listen(port, () => {
