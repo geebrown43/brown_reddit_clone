@@ -8,6 +8,12 @@ getAllLinks = () => {
     return db.select('*').from('links')
 }
 
+getUserByUserNameandPassword = (email, password) => {
+    return db('users').where({
+       email: email,
+       password: password
+    })
+}
 createUser = (data) => {
     return db('users').insert(data)
 }
@@ -15,10 +21,11 @@ createUser = (data) => {
 createLink = (data) => {
     return db('links').insert(data)
 }
-
+    
 module.exports = {
     getAllUsers,
     createUser,
     createLink,
-    getAllLinks
+    getAllLinks,
+    getUserByUserNameandPassword
 }
