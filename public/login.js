@@ -9,7 +9,7 @@ form.addEventListener('submit', (event) => {
 })
 
 funcLogin = (id1, id2) => {
-    fetch(`http://localhost:3000/api/redditusers/user/${id1},${id2}`)
+    fetch(`https://morning-lake-50008.herokuapp.com/api/redditusers/user/${id1},${id2}`)
     .then((response) => {
         return response.json()
         .then((data) => {
