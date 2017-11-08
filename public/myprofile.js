@@ -48,10 +48,10 @@ createFormInput = () => {
     let voteInput = document.createElement('input')
         voteInput.className = 'input'
         voteInput.placeholder = '0'
-        voteInput.setAttribute('name', 'vote')
+        voteInput.setAttribute('name', 'votes')
     votecontrol.appendChild(voteInput)
 
-    let button = document.createElement('a')
+    let button = document.createElement('button')
         button.className = 'button is-danger is-outlined'
         button.textContent = 'Submit'
     submit_button.appendChild(button)
