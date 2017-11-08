@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
-    <title>Reddit Clone</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+  <title>Reddit Clone</title>
 </head>
+
 <body>
-   <div class="hero-head">
+  <div class="hero-head">
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="index.hbs">
-          <h2>Reddit Clone</h2>
+          <a class="navbar-item" href="/">
+            <h2>Reddit Clone</h2>
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
@@ -25,18 +27,57 @@
           </span>
         </div>
         <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
+          <div class="navbar-end login_status">
             <a class="navbar-item" href="create.hbs">
               Create Account
             </a>
-            
+
           </div>
         </div>
       </div>
     </nav>
   </div>
 
-</body>
+  <div class="columns">
+    <div class="column is-half top_margin">
+      <form id="form">
+        <div class="field">
+          <p class="control has-icons-left has-icons-right">
+            <input class="input" type="email" placeholder="Email" name="email">
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fa fa-check"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input" type="password" placeholder="Password" name="password">
+            <span class="icon is-small is-left">
+              <i class="fa fa-lock"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button is-danger">
+              Login
+            </button>
+          </p>
+        </div>
+    </div>
+    </form>
 
-<script src="navbar.js"></script>
+
+    <div class="column is-half">
+      <img src="/cartoon-robot-free.png" alt="robot" class="robot_margin">
+    </div>
+  </div>
+
+</body>
+<script src="/login.js"></script>
+<script src="/navbar.js"></script>
+
 </html>
